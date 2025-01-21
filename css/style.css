@@ -31,7 +31,11 @@
     background-color: rgb(17, 17, 17);
 }
 
-
+.cart-text, .stori-text{
+    font-size: 1rem;
+    color: rgb(128, 128, 128);
+    margin: 5px 0 30px 0;
+}
 /* header styles */
 .nav-bar{
     /* display: grid;
@@ -111,6 +115,8 @@
 /* -----------curriculum section styles-------- */
 .Curriculum{
     background-image: url(../img/bg.png);
+    text-align: center;
+    margin-bottom: 80px;
 }
 #curriculum-title{
     font-size: 2rem;
@@ -146,11 +152,7 @@
     font-size: 1.7rem;
     margin: 5px 0;
 }
-.cart-text{
-    font-size: 1rem;
-    color: rgb(128, 128, 128);
-    margin: 5px 0 30px 0;
-}
+
 #read-more-1{
     text-decoration: none;
     color: red;
@@ -166,9 +168,96 @@
     color:blue;
     text-transform: capitalize;
 }
+.slaid-btn{
+    padding: 15px 20px;
+    font-size: 20px;
+    background-color: orange;
+    border-radius: 50px;
+    color: white;
+    font-weight: 700;
+    border: none;
+    margin: 10px;
+}
+
+/* --------story section style---------- */
+.storis{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) , rgba(247, 210, 78, 0.491) );
+} 
+
+.stori-section{
+    background-image: url(../img/bg.png);
+    
+    text-align: center;
+
+}
+.storis-title{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 60px 0 80px 0;
+    text-align: center;
+}
+#stori-box-1{
+    grid-area: stori-box-1;
+}
+#stori-box-2{
+    grid-area: stori-box-2;
+}
+#stori-box-3{
+    grid-area: stori-box-3;
+}
+#stori-box-4{
+    grid-area: stori-box-4;
+}
+#stori-box-5{
+    grid-area: stori-box-5;
+}
+
+.storis-container{
+    display: grid;
+    grid-template-areas: 
+    "stori-box-1 stori-box-2 stori-box-3"
+    "stori-box-1 stori-box-4 stori-box-5"
+    ;
+    gap: 15px;
+    margin-bottom: 80px;
+}
+.stori-box{
+    background-color: white;
+    border: none;
+    border-radius:15px;
+    text-align: left;
+}
+.stori-box>h5{
+    font-size: 1.2rem;
+    padding:  20px;
+    width: 100%;
+    
+}
+.stori-box>img{
+    border-radius: 15px 15px 0 0;
+    border: none;
+}
+.stori-text{
+    padding: 20px;
+}
+.stori-box>button{
+    padding: 10px 15px;
+    font: 1.1rem;
+    border-radius: 25px;
+    border: none;
+    position: relative;
+    top: -25px ;
+    left: 20px;
+    background-color: aquamarine;
+}
 
 @media screen and (max-width:576px) {
-    .nav-menu, .nav-bar>.btn-1, .logo-part>h2{
+    .nav-menu,
+    .nav-bar>.btn-1,
+    .logo-part>h2,
+    #stori-box-1,
+    .slaid-btn
+    {
         display: none;
     }
     .nav-bar{
@@ -205,7 +294,20 @@
         flex-direction: column;
         padding: 0 15px;
     }
-    .Curriculum{
+    
+    /* storis section */
+    .storis-container{
+        display: grid;
+        grid-template-areas: 
+        "stori-box-2 stori-box-3"
+        "stori-box-4 stori-box-5"
+        ;
         
+    }
+    .stori-section{
+        width: 100%;
+    }
+    .stori-box>img{
+        width: 100%;
     }
 }
