@@ -61,7 +61,7 @@
     width: 30px;
     display: none;
 }
-.nav-menu li{
+.nav-menu li a{
     font-size: 20px;
     /* font-weight: 600; */
 }
@@ -83,6 +83,7 @@
 #nav-item-4 a{
     color: rgb(221, 193, 14);
 }
+
 
 /*----------- hero styles------------ */
 
